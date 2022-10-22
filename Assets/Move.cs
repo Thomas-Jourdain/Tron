@@ -45,6 +45,16 @@ public class Move : MonoBehaviour
             co.transform.localScale = new Vector2(1, dist+1);
     }
 
+    void OnTriggerEnter2D(Collider2D co)
+    {
+        // Not the current wall? i.e pas le mur que le joueur vient de placer
+        if (co != wall)
+        {
+            print("Player lost: " + name);
+            Destroy(gameObject);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
