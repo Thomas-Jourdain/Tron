@@ -52,6 +52,7 @@ public class Move : MonoBehaviour
         {
             print("Player lost: " + name);
             Destroy(gameObject);
+            
         }
     }
 
