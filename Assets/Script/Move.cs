@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Move : MonoBehaviour
 {
@@ -52,7 +53,7 @@ public class Move : MonoBehaviour
         {
             print("Player lost: " + name);
             Destroy(gameObject);
-            
+            SceneManager.LoadScene(2); // 2 = game over  # TODO : faire un game over par joueur et linker ou faire une winning screen et linker à la scene
         }
     }
 
