@@ -91,5 +91,8 @@ public class Move : MonoBehaviour
         }
 
         fitColliderBetween(wall, lastWallEnd, transform.position);
+
+        ScoreManager.instance.addPoint();
+
     }
 }
